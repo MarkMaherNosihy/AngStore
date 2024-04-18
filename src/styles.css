@@ -5,3 +5,10 @@ li {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.absolute-center {
+    position: absolute;
+    top: 50%; /* Position the item 50% from the top of its parent */
+    left: 50%; /* Position the item 50% from the left of its parent */
+    transform: translate(-50%, -50%); /* Center the item horizontally and vertically */
+  }
