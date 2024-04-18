@@ -1,8 +1,0 @@
-
-.login-btn, .register-btn {
-    cursor: pointer;
-}
-
-.login-btn:hover, .register-btn:hover{
-    color: black !important; 
-}
