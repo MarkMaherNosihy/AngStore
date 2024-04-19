@@ -12,3 +12,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     left: 50%; /* Position the item 50% from the left of its parent */
     transform: translate(-50%, -50%); /* Center the item horizontally and vertically */
   }
+
+  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+::-webkit-scrollbar {
+    display: none;
+}

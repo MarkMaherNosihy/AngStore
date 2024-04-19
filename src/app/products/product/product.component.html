@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-content
+      class="d-flex flex-column justify-content-between"
+      style="min-height: 350px"
+    >
+      <div class="d-flex justify-content-center">
+        <img
+          src="{{ product.image }}"
+          style="max-width: 100%; height: 200px"
+          alt=""
+        />
+      </div>
+      <div class="d-flex flex-column justify-content-between h-100">
+        <div>
+          <mat-card-title class="fs-6">{{
+            formatTitle(product.title, 60)
+          }}</mat-card-title>
+          <mat-card-subtitle>{{ product.price }} L.E</mat-card-subtitle>
+        </div>
+        <button mat-flat-button color={{addToCartBtnColor}} (click)="addToCart()">{{addToCartBtnText}}</button>
+      </div>
+    </mat-card-content>
+  </mat-card>

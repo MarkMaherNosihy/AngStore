@@ -1,1 +1,51 @@
-<p>cart works!</p>
+<div class="row cart-container">
+  <div class="d-flex justify-content-between border-bottom mb-5">
+    <h1 class="px-5 fw-bold">Shopping cart</h1>
+    <h1 class="px-5 fw-bold">{{ numOfCartItems }} Items</h1>
+  </div>
+  <div class="d-flex justify-content-between">
+    <div class="w-50">
+      <h1 class="fw-bold ps-2" style="color: #9e9a9a; font-size: 0.9rem">
+        Product details
+      </h1>
+    </div>
+    <div class="d-flex w-50">
+      <h1
+        class="fw-bold w-50 text-center"
+        style="color: #9e9a9a; font-size: 0.9rem"
+      >
+        Quantity
+      </h1>
+      <h1
+        class="fw-bold w-25 text-center"
+        style="color: #9e9a9a; font-size: 0.9rem"
+      >
+        Price
+      </h1>
+      <h1
+        class="fw-bold w-25 text-center"
+        style="color: #9e9a9a; font-size: 0.9rem"
+      >
+        Total
+      </h1>
+    </div>
+  </div>
+  <div
+    class="position-relative ps-4"
+    style="max-height: 50vh; overflow-y: scroll"
+  >
+    <div class="col-xs-12 mb-4" *ngFor="let cartItem of cartItems">
+      <app-cart-item
+        class="d-flex justify-content-center"
+        [cartItem]="cartItem"
+      ></app-cart-item>
+    </div>
+  </div>
+  <div class="summary">
+    <h1 class="text-black border-bottom pb-2">Order Summary</h1>
+    <div class="d-flex justify-content-between align-items-center">
+      <button mat-flat-button color="accent" class="w-50 py-4">Checkout</button>
+      <p class="text-black fw-bold fs-5">Subtotal: {{totalPrice.toFixed(2)}}</p>
+    </div>
+  </div>
+</div>

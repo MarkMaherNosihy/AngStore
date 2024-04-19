@@ -5,11 +5,24 @@
         <span class="logo-text">AngStore</span>
       </div>
       <div class="nav-list">
-        <button routerLink="/cart" mat-fab extended color="accent" class="nav-button">
+        <button
+          routerLink="/cart"
+          mat-button
+          extended
+          color="primary"
+          class="nav-button"
+          matBadge={{cartQuantity}} matBadgePosition="before" matBadgeColor="accent"
+        >
           <mat-icon>shopping_cart</mat-icon>
           Cart
         </button>
-        <button routerLink="/" mat-fab extended color="accent" class="nav-button">
+        <button
+          routerLink="/"
+          mat-button
+          extended
+          color="primary"
+          class="nav-button"
+        >
           <mat-icon class="nav-icon">window</mat-icon>
           Products
         </button>
