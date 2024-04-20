@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { CategoryService } from '../services/category.service';
 import { ProductComponent } from './product/product.component';
 import { CartService } from '../services/cart.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -17,7 +18,8 @@ import { CartService } from '../services/cart.service';
     MatSnackBarModule,
     CommonModule,
     MatProgressSpinnerModule,
-    ProductComponent
+    ProductComponent,
+    RouterModule
   ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css',

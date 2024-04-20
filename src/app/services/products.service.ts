@@ -12,4 +12,8 @@ export class ProductsService {
   getProducts(){
     return this.httpClient.get(`${env.baseApi}products`)
   }
+
+  getProductByID(id:number){
+    return this.httpClient.get(`${env.baseApi}products/${id}`);
+  }
 }

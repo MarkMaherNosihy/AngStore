@@ -22,7 +22,7 @@
     *ngFor="let product of products"
   >
     <div *ngIf="!isLoading">
-        <app-product [product]="product"></app-product>
+        <app-product [product]="product" style="cursor: pointer;" routerLink="/details/{{product.id}}" ></app-product>
     </div>
   </div>
 </div>

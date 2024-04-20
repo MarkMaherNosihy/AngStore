@@ -3,21 +3,31 @@
       class="d-flex flex-column justify-content-between"
       style="min-height: 350px"
     >
-      <div class="d-flex justify-content-center">
+      <div  class="d-flex justify-content-center">
         <img
           src="{{ product.image }}"
           style="max-width: 100%; height: 200px"
           alt=""
         />
       </div>
-      <div class="d-flex flex-column justify-content-between h-100">
+      <div   class="d-flex flex-column justify-content-between h-100">
         <div>
-          <mat-card-title class="fs-6">{{
+          <mat-card-title class="fw-bold" style="font-size: 0.8rem;">{{
             formatTitle(product.title, 60)
           }}</mat-card-title>
-          <mat-card-subtitle>{{ product.price }} L.E</mat-card-subtitle>
+          <div class="d-flex">
+            <star-rating
+              [readOnly]="true"
+              [starType]="'svg'"
+              [rating]="product.rating.rate"
+            ></star-rating>
+            <p class="text-primary">({{ product.rating.count }}) reviews</p>
+          </div>
+          <div>
+            <h1 class="fs-6 fw-bold ">{{product.price}} L.E</h1>
+          </div>
         </div>
-        <button mat-flat-button color={{addToCartBtnColor}} (click)="addToCart()">{{addToCartBtnText}}</button>
       </div>
+      <button mat-flat-button color={{addToCartBtnColor}} (click)="addToCart($event)">{{addToCartBtnText}}</button>
     </mat-card-content>
   </mat-card>

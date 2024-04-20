@@ -1,1 +1,86 @@
-<p>product-details works!</p>
+<div *ngIf="!isLoading" class="row">
+  <div class="col-sm-12 col-md-6 col-lg-4 border p-5">
+    <div class="h-100 d-flex flex-column justify-content-center">
+      <img src="{{ productDetails.image }}" alt="" style="max-width: 100%" />
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-6 col-lg-8 px-md-5 py-2 py-md-0">
+
+    <div class="d-flex flex-column justify-content-between h-100">
+
+      <div>
+        <div>
+            <h1>{{ productDetails.title }}</h1>
+          </div>
+        <div class="d-flex">
+          <star-rating
+            [readOnly]="true"
+            [starType]="'svg'"
+            [rating]="productDetails.rating.rate"
+          ></star-rating>
+          <p class="text-primary">({{ productDetails.rating.count }}) reviews</p>
+        </div>
+        <div class="mb-5">
+          <h1>
+            {{ productDetails.price }} L.E
+            <span class="text-primary fs-6">/per item</span>
+          </h1>
+        </div>
+        <div class="mb-5">
+          <p>{{ productDetails.description }}</p>
+        </div>
+        <div class="w-50 d-flex justify-content-between">
+          <p class="fw-bold">Type:</p>
+          <p class="">Not available</p>
+        </div>
+        <div class="w-50 d-flex justify-content-between">
+          <p class="fw-bold">Color:</p>
+          <p class="">Not available</p>
+        </div>
+        <div class="w-50 d-flex justify-content-between">
+          <p class="fw-bold">Brand:</p>
+          <p class="">Not available</p>
+        </div>
+        <div class="w-50 d-flex justify-content-between">
+          <p class="fw-bold">Material:</p>
+          <p class="">Not available</p>
+        </div>
+      </div>
+      <div class="w-100 d-flex justify-content-center pt-4">
+        <button class="w-75 py-4" mat-flat-button color="primary">Add to cart</button>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<div *ngIf="isLoading" class="absolute-center">
+  <mat-spinner></mat-spinner>
+</div>
+
+<!-- <div class="col-sm-12 col-md-5 col-lg-5">
+    <div class="d-flex h-100 align-items-center">
+      <img src="{{ productDetails.image }}" alt="" style="max-width: 100%; display: flex; align-items: center;" />
+    </div>
+  </div>
+
+  <div class="col-sm-12 col-md-5 col-lg-5">
+    <div>
+      <h1 style="font-size: 2rem" class="border-bottom pb-2">
+        {{ productDetails.title }}
+      </h1>
+      <div class="d-flex">
+        <star-rating
+          [readOnly]="true"
+          [starType]="'svg'"
+          [rating]="productDetails.rating.rate"
+        ></star-rating>
+        <p>({{ productDetails.rating.count }}) reviews</p>
+      </div>
+      <h1 style="font-size: 1rem">{{ productDetails.price }} L.E</h1>
+      <p style="max-width: 600px" class="fw-medium">
+        {{ productDetails.description }}
+      </p>
+    </div>
+  </div> -->

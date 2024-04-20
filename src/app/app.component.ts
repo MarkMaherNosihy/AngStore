@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductsService } from './services/products.service';
 import { CategoryService } from './services/category.service';
 import { CartService } from './services/cart.service';
+import { StarRatingConfigService } from 'angular-star-rating';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ import { CartService } from './services/cart.service';
   imports: [RouterModule ,HeaderComponent, HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  providers: [ProductsService, CategoryService, CartService]
+  providers: [ProductsService, CategoryService, CartService, StarRatingConfigService]
 })
 export class AppComponent {
   title = 'AngStore';

@@ -5,6 +5,6 @@ import { ProductDetailsComponent } from './products/product-details/product-deta
 export const routes: Routes = [
     {path:'cart', component: CartComponent},
     {path:'products', component: ProductsComponent},
-    {path:'details', component: ProductDetailsComponent},
+    {path:'details/:id', component: ProductDetailsComponent},
     {path:'**', redirectTo: 'products', pathMatch: "full"}
 ];
