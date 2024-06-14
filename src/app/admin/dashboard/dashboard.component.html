@@ -1,0 +1,16 @@
+<mat-sidenav-container>
+    <mat-sidenav opened mode="side" class="side-nav">
+        <div>
+            <h1>Admin dashboard</h1>
+        </div>
+        <button mat-flat-button routerLink="/admin/dashboard/products">
+            <mat-icon>
+                dashboard
+            </mat-icon>
+            Manage Products
+        </button>
+    </mat-sidenav>
+    <mat-sidenav-content class="main-content">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

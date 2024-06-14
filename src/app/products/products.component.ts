@@ -9,6 +9,7 @@ import { CategoryService } from '../services/category.service';
 import { ProductComponent } from './product/product.component';
 import { CartService } from '../services/cart.service';
 import { RouterModule } from '@angular/router';
+import { Product } from '../models/product';
 
 @Component({
   selector: 'app-products',
@@ -25,9 +26,9 @@ import { RouterModule } from '@angular/router';
   styleUrl: './products.component.css',
 })
 export class ProductsComponent implements OnInit {
-  products: any[] = [];
+  products: Product[] = [];
   isLoading: boolean = true;
-  categories: any[] = ['All'];
+  categories: string[] = ['All'];
   selectedCategory!: string;
   constructor(private productService: ProductsService
     ,private _snackBar: MatSnackBar, private categoryService: CategoryService) {}

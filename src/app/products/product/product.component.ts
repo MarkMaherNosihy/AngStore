@@ -6,6 +6,7 @@ import { CartService } from '../../services/cart.service';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { RouterModule } from '@angular/router';
 import { StarRatingModule } from 'angular-star-rating';
+import { Product } from '../../models/product';
 
 
 @Component({
@@ -16,7 +17,7 @@ import { StarRatingModule } from 'angular-star-rating';
   styleUrl: './product.component.css'
 })
 export class ProductComponent {
-  @Input() product: any;
+  @Input() product!: Product;
   addToCartBtnText: string = 'Add to cart';
   addToCartBtnColor: string = 'primary';
   constructor( private cartService: CartService, private _matSnack: MatSnackBar){

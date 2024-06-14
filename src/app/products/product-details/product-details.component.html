@@ -47,7 +47,7 @@
         </div>
       </div>
       <div class="w-100 d-flex justify-content-center pt-4">
-        <button class="w-75 py-4" mat-flat-button color="primary">Add to cart</button>
+        <button class="w-75 py-4" mat-flat-button [color]="addToCartColor"(click)="addToCart()">{{addToCartText}}</button>
       </div>
     </div>
 
